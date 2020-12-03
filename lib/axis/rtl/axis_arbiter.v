@@ -29,7 +29,7 @@ THE SOFTWARE.
 /*
  * Arbiter module
  */
-module arbiter #
+module axis_arbiter #
 (
     parameter PORTS = 4,
     // arbitration type: "PRIORITY" or "ROUND_ROBIN"

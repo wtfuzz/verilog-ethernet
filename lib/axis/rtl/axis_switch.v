@@ -274,7 +274,7 @@ generate
         wire grant_valid;
         wire [CL_S_COUNT-1:0] grant_encoded;
 
-        arbiter #(
+        axis_arbiter #(
             .PORTS(S_COUNT),
             .TYPE(ARB_TYPE),
             .BLOCK("ACKNOWLEDGE"),

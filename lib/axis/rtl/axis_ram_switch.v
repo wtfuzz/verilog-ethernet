@@ -246,7 +246,7 @@ generate
 
 if (S_COUNT > 1) begin
 
-    arbiter #(
+    axis_arbiter #(
         .PORTS(S_COUNT),
         .TYPE("ROUND_ROBIN"),
         .BLOCK("NONE"),
@@ -282,7 +282,7 @@ generate
 
 if (M_COUNT > 1) begin
 
-    arbiter #(
+    axis_arbiter #(
         .PORTS(M_COUNT),
         .TYPE("ROUND_ROBIN"),
         .BLOCK("NONE"),
@@ -459,7 +459,7 @@ generate
         wire grant_valid;
         wire [CL_M_COUNT-1:0] grant_encoded;
 
-        arbiter #(
+        axis_arbiter #(
             .PORTS(M_COUNT),
             .TYPE(ARB_TYPE),
             .BLOCK("ACKNOWLEDGE"),
@@ -778,7 +778,7 @@ generate
         wire grant_valid;
         wire [CL_S_COUNT-1:0] grant_encoded;
 
-        arbiter #(
+        axis_arbiter #(
             .PORTS(S_COUNT),
             .TYPE(ARB_TYPE),
             .BLOCK("ACKNOWLEDGE"),

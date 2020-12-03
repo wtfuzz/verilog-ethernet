@@ -117,7 +117,7 @@ wire [DEST_WIDTH-1:0] current_s_tdest  = s_axis_tdest[grant_encoded*DEST_WIDTH +
 wire [USER_WIDTH-1:0] current_s_tuser  = s_axis_tuser[grant_encoded*USER_WIDTH +: USER_WIDTH];
 
 // arbiter instance
-arbiter #(
+axis_arbiter #(
     .PORTS(S_COUNT),
     .TYPE(ARB_TYPE),
     .BLOCK("ACKNOWLEDGE"),
